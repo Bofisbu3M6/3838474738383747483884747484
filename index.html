@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPERNEW AIMLOCK</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <section id="loginPage" class="screen active">
+    <div class="card login-card">
+      <h1>SPERNEW AIMLOCK</h1>
+      <p>Phiên bản HTML/CSS/JS thuần chuyển đổi từ source React/Replit.</p>
+
+      <input type="text" id="keyInput" placeholder="Nhập key kích hoạt">
+
+      <button id="unlockBtn">KÍCH HOẠT</button>
+
+      <div class="key-list">
+        <span>Demo Keys</span>
+        <ul>
+          <li>FREE123</li>
+          <li>VIP999</li>
+          <li>ADMIN777</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="mainPage" class="screen">
+
+    <header class="topbar">
+      <div>
+        <h2>SPERNEW</h2>
+        <small>System Optimizer</small>
+      </div>
+
+      <div class="user-badge" id="userBadge">
+        FREE
+      </div>
+    </header>
+
+    <main class="content">
+
+      <section class="tab active" data-tab="home">
+        <div class="hero">
+          <h2>Aim Optimization</h2>
+          <p>Tăng độ ổn định kéo tâm và FPS.</p>
+        </div>
+
+        <div class="grid">
+          <div class="box">
+            <h3>FPS BOOST</h3>
+            <p>Tối ưu hiệu năng thiết bị.</p>
+          </div>
+
+          <div class="box">
+            <h3>AIM ASSIST</h3>
+            <p>Tăng độ chính xác kéo tâm.</p>
+          </div>
+
+          <div class="box">
+            <h3>TOUCH BOOST</h3>
+            <p>Giảm delay thao tác.</p>
+          </div>
+
+          <div class="box">
+            <h3>DEVICE INFO</h3>
+            <p id="deviceInfo"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab" data-tab="features">
+        <h2>Tính năng</h2>
+
+        <div class="setting">
+          <span>AimLock</span>
+          <input type="checkbox" checked>
+        </div>
+
+        <div class="setting">
+          <span>Auto Headshot</span>
+          <input type="checkbox">
+        </div>
+
+        <div class="setting">
+          <span>FPS Booster</span>
+          <input type="checkbox" checked>
+        </div>
+
+        <div class="setting">
+          <span>Smooth Drag</span>
+          <input type="checkbox" checked>
+        </div>
+      </section>
+
+      <section class="tab" data-tab="stats">
+        <h2>Thông số tối ưu</h2>
+
+        <div class="stat-card">
+          <span>Độ nhạy</span>
+          <div class="progress"><div style="width:95%"></div></div>
+        </div>
+
+        <div class="stat-card">
+          <span>Ổn định FPS</span>
+          <div class="progress"><div style="width:88%"></div></div>
+        </div>
+
+        <div class="stat-card">
+          <span>Touch Response</span>
+          <div class="progress"><div style="width:91%"></div></div>
+        </div>
+      </section>
+
+      <section class="tab" data-tab="vip">
+        <div class="vip-card">
+          <h2>VIP ACCESS</h2>
+          <p>Mở khóa toàn bộ tính năng cao cấp.</p>
+          <button class="vip-btn">NÂNG CẤP VIP</button>
+        </div>
+      </section>
+
+      <section class="tab" data-tab="aimlab">
+        <h2>Aim Lab</h2>
+
+        <div class="box">
+          <p>Drag Speed: <span id="dragValue">80</span>%</p>
+          <input type="range" min="0" max="100" value="80" id="dragSlider">
+        </div>
+
+        <div class="box">
+          <p>Aim Precision: <span id="precisionValue">92</span>%</p>
+          <input type="range" min="0" max="100" value="92" id="precisionSlider">
+        </div>
+      </section>
+
+      <section class="tab" data-tab="admin">
+        <h2>ADMIN PANEL</h2>
+
+        <div class="admin-grid">
+          <div class="box">Realtime Monitoring</div>
+          <div class="box">System Config</div>
+          <div class="box">Device Manager</div>
+          <div class="box">Logs Viewer</div>
+        </div>
+      </section>
+
+      <section class="tab" data-tab="settings">
+        <h2>Cài đặt</h2>
+
+        <div class="setting">
+          <span>Dark Mode</span>
+          <input type="checkbox" checked>
+        </div>
+
+        <div class="setting">
+          <span>Animation</span>
+          <input type="checkbox" checked>
+        </div>
+
+        <div class="setting">
+          <span>Performance Mode</span>
+          <input type="checkbox">
+        </div>
+
+        <button id="logoutBtn" class="danger-btn">ĐĂNG XUẤT</button>
+      </section>
+
+    </main>
+
+    <nav class="navbar">
+      <button data-nav="home">HOME</button><button data-nav="features">FEATURES</button><button data-nav="stats">STATS</button><button data-nav="vip">VIP</button><button data-nav="aimlab">AIMLAB</button><button data-nav="admin">ADMIN</button><button data-nav="settings">SETTINGS</button>
+    </nav>
+
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
